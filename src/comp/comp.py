@@ -20,11 +20,7 @@ humans = [
     Human("Igon", 41),
     Human("David", 31),
 ]
-humans_copy = humans
-for elem in humans_copy:
-    humans_copy.append(elem.name.upper())
-    humans_copy.append(elem.age + 5)
-print(humans_copy)
+
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
@@ -85,9 +81,12 @@ f = [(i.name,i.age) for i in humans if i.age >= 27 and i.age <= 32]
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 # print("All names uppercase:")
-
-g = []
-# print(g)
+humans_copy = []
+# for elem in humans:
+#     humans_copy.append(Human(elem.name.upper(), elem.age + 5))
+# print(humans_copy)
+g = [humans_copy.append(Human(i.name.upper(), i.age + 5)) for i in humans]
+print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
 # print("Square root of ages:")
